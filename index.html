@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mountain World</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f8f5;
+}
+
+/* NAVBAR */
+
+header {
+    width: 100%;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #102b2b;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #f4b942;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin-left: 25px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+/* HERO SECTION */
+
+.hero {
+    height: 100vh;
+    min-height: 600px;
+    background:
+    linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)),
+    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #f4a62a;
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #f458121;
+    color: #222;
+}
+
+/* ABOUT SECTION */
+
+.about {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 38px;
+    color: #174b3b;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* GALLERY */
+
+.gallery {
+    padding: 70px 8%;
+    background: #eaf2ed;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 38px;
+    color: #174b3b;
+    margin-bottom: 40px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 20px;
+    color: #174b3b;
+}
+
+/* CONTACT */
+
+.contact {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #174b3b;
+}
+
+.contact p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #102b2b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 8px;
+        font-size: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about h2,
+    .gallery h2 {
+        font-size: 30px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+    <div class="logo">Mountain<span>World</span></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>Explore The Mountains</h1>
+
+        <p>Discover Nature, Beauty and Peace.</p>
+
+        <a href="#gallery" class="btn">Explore Now</a>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <h2>About Nature</h2>
+
+    <p>
+        Mountains are one of the most beautiful gifts of nature.
+        They give us fresh air, peaceful surroundings and amazing views.
+        Explore the beauty of mountains and enjoy the natural world.
+    </p>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="gallery" id="gallery">
+
+    <h2>Beautiful Mountain Gallery</h2>
+
+    <div class="gallery-container">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800" alt="Snowy Mountains">
+            <h3>Snow Mountains</h3>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800" alt="Mountain Lake">
+            <h3>Beautiful Lake</h3>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" alt="Nature">
+            <h3>Green Nature</h3>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800" alt="Mountain Night">
+            <h3>Mountain Night</h3>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?w=800" alt="Mountain Forest">
+            <h3>Mountain Forest</h3>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800" alt="Mountain View">
+            <h3>Nature View</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2>Explore The World</h2>
+
+    <p>Enjoy the beauty of nature and make beautiful memories.</p>
+
+    <a href="#home" class="btn">Back To Top</a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>© 2026 Mountain World | All Rights Reserved</p>
+
+</footer>
+
+</body>
+</html>
